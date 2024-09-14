@@ -1,0 +1,11 @@
+lashnev:
+  legacy-code:
+    dependencies:
+      -
+        type: parent
+        name: common-platform-parent
+        minimal-version: 2.0.0
+      -
+        type: library
+        name: caffeine
+        minimal-version: 2.0.0

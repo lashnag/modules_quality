@@ -1,0 +1,37 @@
+spring:
+  application.name: modules-quality
+  profiles.active: dev
+
+lashnev:
+  git.credentials:
+    base64PrivateKey: ${secret.git.key}
+    gerritLogin: ru-svc-mod-qa
+    gerritPort: 29418
+    githubPort: 22
+  quality-limits:
+    stable-abstraction:
+      max-distance-from-optimal-diagonal: 0.4
+  cache:
+    enable: true
+    dao:
+      ttl: 3m
+      maximum-elements: 15
+    local-repositories:
+      ttl: 10m
+      maximum-elements: 3
+  warning-descriptions:
+    acyclic-dependency-principle-link: https://habr.com/ru/companies/qiwi/articles/697946/
+    stable-dependency-principle-link: https://habr.com/ru/companies/qiwi/articles/697946/
+    stable-abstraction-principle-link: https://habr.com/ru/companies/qiwi/articles/697946/
+  legacy-code:
+    dependencies:
+      -
+        type: parent
+        name: platform-parent
+        minimal-version: 2.0.0
+c3p0:
+  named-configs:
+    db:
+      jdbcUrl: "jdbc:postgresql://your_domain.ru/your_db"
+      user: ${secret.jdbc_user}
+      password: ${secret.jdbc_password}

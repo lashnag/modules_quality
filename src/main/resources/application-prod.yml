@@ -1,0 +1,7 @@
+lashnev:
+  cache:
+    enable: true
+c3p0:
+  named-configs:
+    db:
+      jdbcUrl: "jdbc:postgresql://your_domain.ru/your_db"
