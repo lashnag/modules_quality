@@ -12,7 +12,6 @@ import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.http.HttpMethod
 import org.springframework.http.HttpStatus
-import org.springframework.web.ErrorResponse
 import ru.lashnev.modules.quality.model.Warning
 import ru.lashnev.modules.quality.model.WarningType
 import ru.lashnev.modules.quality.service.WarningsCompositeService
